@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FTC for Beginners</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Road+Rage&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
+      /* Base */
+      body {
+        background-color: black;
+        color: #eee;
+        font-family: "JetBrains Mono", monospace;
+        margin: 0;
+      }
+
+      /* Header: title on the left, links on the right */
+      header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 40px;
+        padding: 20px 40px;
+      }
+
       h1 {
         font-family: "Audiowide", sans-serif;
         font-weight: 400;
         font-style: normal;
         color: white;
+        margin: 0;
+        text-align: left;
+      }
+
+      /* Nav: links side by side */
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 50px;
       }
 
       a {
         color: #39ff14;
-        transition: font-size 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        transition: transform 0.3s ease, color 0.3s ease;
       }
 
       a:hover {
-        font-size: 1.5rem;
+        transform: scale(1.15);
+        color: white;
       }
 
+      /* Mobile: stack the title above the links */
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          gap: 15px;
+        }
 
-      body {
-        background-color: black;
-      }
-  
-      /*For Heading*/
-      .heading h1 {
-        text-align: center;
-      }
-      
-      .heading a {
-        gap: 30 px;
+        nav {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+        }
       }
 
-      body {
-        background-color: black;
+      /* Respect reduced-motion settings */
+      @media (prefers-reduced-motion: reduce) {
+        a {
+          transition: none;
+        }
       }
-      
     </style>
-
   </head>
 
   <body>
-    <header class = "heading">
-      <div>
-        <h1>Homepage</h1>
+    <header class="heading">
+      <h1>Homepage</h1>
+
+      <nav>
         <a href="index.html">Home and Overview</a>
-        <a href="cad.html">CAD Turtorials</a>
+        <a href="cad.html">CAD Tutorials</a>
         <a href="code.html">Coding Tutorials</a>
-      </div>
+      </nav>
     </header>
-  
-    
-  
   </body>
-  
-  
 </html>
