@@ -20,11 +20,13 @@
 
       a {
         color: #39ff14;
+        transition: font-size 0.3s ease;
       }
 
       a:hover {
         font-size: 1.5rem;
       }
+
 
       body {
         background-color: black;
@@ -33,6 +35,10 @@
       /*For Heading*/
       .heading h1 {
         text-align: center;
+      }
+      
+      .heading a {
+        gap: 30 px;
       }
 
       body {
@@ -45,15 +51,14 @@
 
   <body>
     <header class = "heading">
-      <h1>Homepage</h1>
-      <p>IMAGE</p>
+      <div>
+        <h1>Homepage</h1>
+        <a href="index.html">Home and Overview</a>
+        <a href="cad.html">CAD Turtorials</a>
+        <a href="code.html">Coding Tutorials</a>
+      </div>
     </header>
-    
-    <div>
-      <a href="index.html">Home and Overview</a>
-      <a href="cad.html">CAD Turtorials</a>
-      <a href="code.html">Coding Tutorials</a>
-    </div>
+  
     
   
   </body>
